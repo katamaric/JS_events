@@ -78,6 +78,27 @@ for (let i = 0 ; i < cards.length ; i++) {
 
 // Functionality 7 - To the right
 
+let buttonRight = document.querySelector('.btn.btn-secondary');
 
+buttonRight.addEventListener('click', function() {
+  let cards = document.querySelectorAll('.col-md-4');
+  let lastCard = cards[(cards.length) - 1];
+  let firstCard = cards[0];
+  let parentDiv = firstCard.parentNode;
 
+  parentDiv.insertBefore(lastCard, firstCard);
+})
 
+// Functionality 8 - To the left
+let buttonLeft = document.querySelector('.btn.btn-primary');
+
+buttonLeft.addEventListener('click', function(leftie) {
+  leftie.preventDefault();
+
+  // let cardsContainer = document.querySelector('.row');
+  // let firstCard = cardsContainer.firstElementChild;
+  // let lastCard = cardsContainer.lastElementChild;
+  // let nextCard = lastCard.nextElementSibling;
+
+  // cardsContainer.insertBefore(firstCard, nextCard);
+})
